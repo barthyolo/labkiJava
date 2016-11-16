@@ -35,5 +35,21 @@ public class Position {
 		
 		return (that.x == this.x && that.y == this.y);
 	}
+
+	public Position makeMove(MapDirection direction) {
+		//Position result;
+		switch(direction) {
+		case North:
+			return new Position(this.x, this.y + 1);
+		case East:
+			return new Position(this.x + 1, this.y);
+		case South:
+			return new Position(this.x, this.y - 1);
+		case West:
+			return new Position(this.x -1, this.y);
+		default:
+			return null;
+		}
+	}
 	
 }

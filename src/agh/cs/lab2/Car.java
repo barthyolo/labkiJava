@@ -32,7 +32,7 @@ public class Car {
 		return position;
 	}
 
-	public void move(MoveDirection direct) {
+	public void move(MoveDirection direction) {
 
 		/*
 		 * if(direct.equals(MoveDirection.Left)) { this.direction =
@@ -42,21 +42,26 @@ public class Car {
 		 */
 
 		// Position newPosition = getPosition(car);
-		if (map.canMoveTo(this.getPosition())) {
-			switch (direct) {
+		
+		
+			switch (direction) {
 			case Right:
 				this.direction = this.direction.next();
 				break;
-			case Left:
+			case Left:s
 				this.direction = this.direction.previous();
 				break;
-			case Forward:
+			case Forward: {
+				Position newPosition = this.position.makeMove(this.direction);
+				if(this.position)
+				this.position = newPosition;
 				break;
-			case Backward:
+			}
+			case Backward: {
 				break;
+			}
 			default:
 				break;
 			}
 		}
-	}
 }

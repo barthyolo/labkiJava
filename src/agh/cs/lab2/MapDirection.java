@@ -54,4 +54,12 @@ public enum MapDirection {
 		return MapDirection.values()[(this.ordinal()+3)%4];
 	}
 	
+	public MapDirection setDirection(MapDirection direction, MoveDirection newdirection) {
+			if(newdirection = MoveDirection.Right)
+				return direction.next();
+			if(newdirection = MoveDirection.Left)
+				return direction.previous();
+			return direction;
+	}
+	
 }

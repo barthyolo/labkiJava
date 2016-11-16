@@ -35,7 +35,6 @@ public class RectangularMap implements IWorldMap {
 		for(int i=0; i<cars.size(); i++) {
 			cars.get(i%cars.size()).move(directions[i]);
 		}
-
 	}
 
 	@Override
